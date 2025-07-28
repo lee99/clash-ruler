@@ -6,8 +6,8 @@
 
 proxy-providers:
 
-  可乐:
-    url: "URL"
+  火烧:
+    url: "机场订阅地址"
     type: http
     interval: 86400
     health-check:
@@ -16,6 +16,85 @@ proxy-providers:
       interval: 180
     proxy: 直连
 
+  冰云:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  小牛:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  硅谷:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  无界:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  猫耳:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  快猫:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  BestVPN:
+    url: "机场订阅地址a"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+
+  牛逼:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
 
 proxies:
   - {name: 直连, type: direct}
@@ -55,6 +134,45 @@ dns:
     - +.lan
     - +.local
     - geosite:cn
+    # 快猫
+    - +.quickcht3.club
+    - +.kuaimao2.club
+    # 火烧
+    - +.onesubv.site
+    - +.oneyyds.online
+    - +.fengyyds.site
+    - +.onemg.top
+    # 猫耳
+    - +.zhunchuanpb.com
+    - +.sevenka.top
+    # BestVPN
+    - +.networklinkpro.net
+    - +.prosubnet02.eu
+    # 小牛
+    - +.4yfu73r3a4kl.com
+    - +.xiaoniuyun.cc
+    # 硅谷
+    - +.huawei-cloud.shop
+    - +.huawei-cloud.vip
+    - +.gpt-agent.cc
+    # 无界
+    - +.acwct.cn
+    - +.472361.xyz
+    # 冰云
+    - +.bingyun.ink
+    - +.fafhjkah.xyz
+    # 牛逼
+    - +.66jc.top
+    - +.jueduibupao.top
+
+    - +.ynhtbank.com
+    - +.qeayr.cn
+    - +.saojc.xyz
+    - +.sssyun.xyz
+    - +.dler.cloud
+    - +.0tk8a3a1q4t94dler.com
+    - +.aerianas.top
+    - +.gptacg.top
 
 ipv6: false
 
@@ -327,6 +445,9 @@ rules:
   - RULE-SET,Microsoft / Domain,Microsoft
   - RULE-SET,Apple / Domain,Apple
   - RULE-SET,Apple-CN / Domain,Apple
+  - RULE-SET,OKX / Domain,Crypto
+  - RULE-SET,Bybit / Domain,Crypto
+  - RULE-SET,Binance / Domain,Crypto
   - RULE-SET,TikTok / Domain,Stream Media
   - RULE-SET,Netflix / Domain,Stream Media
   - RULE-SET,Netflix / IP,Stream Media,no-resolve
@@ -374,6 +495,9 @@ rule-providers:
   Apple-CN / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs"}
   Apple / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"}
   Microsoft / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
+  OKX / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
+  Bybit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs"}
+  Binance / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
   TikTok / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
   Netflix / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs"}
   Netflix / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs"}
