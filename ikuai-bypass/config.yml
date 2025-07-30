@@ -26,7 +26,7 @@ stream-ipport: # 端口分流，与IP分组组合使用
     mode: 0 # 负载模式，0-新建连接数， 1-源IP， 2-源IP+源端口，3-源IP+目的IP，4-源IP+目的IP+目的端口，5-主备模式
     ifaceband: 0 # 线路绑定 (线路断开后禁止切换到其他线路) ，0-不勾选， 1-勾选
   - type: 1 # 分流方式：0-外网线路，1-下一跳网关
-    nexthop: 192.168.1.2 # 下一跳网关  一般是openwrt地址
+    nexthop: 192.168.10.2 # 下一跳网关  一般是openwrt地址
     src-addr: 192.168.10.10-192.168.10.249
     ip-group: Telegram
 
@@ -50,23 +50,23 @@ stream-domain: # 域名分流 可选功能，优先级比ip分流高
   #  ## 域名列表网址，每行一个，超过1000行会自动分为多个
   #  url:  https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/greatfire.txt
   # 下面是强制走wan2的
+  
   - interface: wan2
+    src-addr: 192.168.10.10-192.168.10.249
+    # 强制走代理的域名
+    url: https://gh-proxy.com/raw.githubusercontent.com/lee99/clash-ruler/refs/heads/main/ikuai-bypass/bypass-domain-list.txt
+    tag: private_bypass
+   - interface: wan2
     src-addr: 192.168.10.10-192.168.10.249
     url: https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
     tag: gfw
-  - interface: wan2
-    src-addr: 192.168.10.10-192.168.10.249
-    # 作者自己维护的自定义的域名列表 强制走代理的域名
-    url: https://gh-proxy.com/raw.githubusercontent.com/joyanhui/ikuai-bypass/main/private/bypass-domain-list.txt
-    tag: private_bypass
-  # 下面是自动走wan1直连的，
+    # 强制直连的，
   - interface: wan1
     src-addr: 192.168.10.10-192.168.10.249
-    # 作者自己维护的自定义的域名列表 主要存放github的镜像网站等国内可以直连的镜像或其他类型域名
-    url: https://gh-proxy.com/raw.githubusercontent.com/joyanhui/ikuai-bypass/main/private/direct-domain-list.txt
+    url: https://gh-proxy.com/raw.githubusercontent.com/lee99/clash-ruler/refs/heads/main/ikuai-bypass/direct-domain-list.txt
     tag: private_direct
-  #- interface: wan1
-  #  src-addr: 192.168.10.10-192.168.10.249
-  #  china-list 网址列表较大，不建议启用,在部分ikuai设备上可能会导致维护的时候超时出错。
-  #  url:  https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/china-list.txt
-  #  tag: cn
+  - interface: wan1
+    src-addr: 192.168.10.10-192.168.10.249
+    #china-list 网址列表较大，不建议启用,在部分ikuai设备上可能会导致维护的时候超时出错。
+    url:  https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/china-list.txt
+    tag: cn_site
