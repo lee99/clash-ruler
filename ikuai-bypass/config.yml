@@ -15,7 +15,7 @@ ip-group: # IP分组 和端口分流配合使用
 stream-ipport: # 端口分流，与IP分组组合使用
   - type: 0 # 分流方式：0-外网线路，1-下一跳网关
     interface: wan1 # 分流线路 这里默认到wan1 运营商
-    src-addr: 192.168.10.10-192.168.10.249 # 分流的源地址  对应 ip-group: 国内 的目标地址
+    src-addr: 192.168.10.30-192.168.10.249 # 分流的源地址  对应 ip-group: 国内 的目标地址
     ip-group: 国内
 
 
@@ -33,22 +33,22 @@ custom-isp: # 自定义运营商  IP分流
 
 stream-domain: # 域名分流 可选功能，优先级比ip分流高
   #- interface: wan2 # 分流线路
-  #  src-addr: 192.168.10.10-192.168.10.249    # 分流的源地址 多ip段用“,”分开 参考 https://github.com/joyanhui/ikuai-bypass/issues/1#issuecomment-1892763993
+  #  src-addr: 192.168.10.30-192.168.10.249    # 分流的源地址 多ip段用“,”分开 参考 https://github.com/joyanhui/ikuai-bypass/issues/1#issuecomment-1892763993
   #  ## 域名列表网址，每行一个，超过1000行会自动分为多个
   #  url:  https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/greatfire.txt
   # 下面是强制走wan2的
 
   - interface: wan2
-    src-addr: 192.168.10.10-192.168.10.249
+    src-addr: 192.168.10.30-192.168.10.249
     # 强制走代理的域名
     url: https://gh-proxy.com/raw.githubusercontent.com/lee99/clash-ruler/refs/heads/main/ikuai-bypass/bypass-domain-list.txt
     tag: private_bypass
   - interface: wan2
-    src-addr: 192.168.10.10-192.168.10.249
+    src-addr: 192.168.10.30-192.168.10.249
     url: https://gh-proxy.com/raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
     tag: gfw
     # 强制直连的，
   - interface: wan1
-    src-addr: 192.168.10.10-192.168.10.249
+    src-addr: 192.168.10.30-192.168.10.249
     url: https://gh-proxy.com/raw.githubusercontent.com/lee99/clash-ruler/refs/heads/main/ikuai-bypass/direct-domain-list.txt
     tag: private_direct
