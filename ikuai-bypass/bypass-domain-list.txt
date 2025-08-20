@@ -1,7 +1,6 @@
 dl.google.com-del
 cache.nixos.org
 copilot.microsoft.com
-
 #linkedin.start.ooooooooooooooooooooooooooooooo
 licdn.cn.cdn20.com
 linkedin.sc.omtrdc.net
@@ -14,9 +13,6 @@ linkedin.at
 linkedin.cn
 linkedin.com
 lnkd.in
-#linkedin.end.ooooooooooooooooooooooooooooooo
-
-#jobboard.start.ooooooooooooooooooooooooooooooo
+#jobboard.ooooooooooooooooooooooooooooooo
 jobboardfinder.com
 jobsdb.com
-#jobboard.end.ooooooooooooooooooooooooooooooo
