@@ -1,3 +1,4 @@
+# Gemini&Bard
 DOMAIN,ai.google.dev
 DOMAIN,alkalimakersuite-pa.clients6.google.com
 DOMAIN,generativelanguage.googleapis.com
@@ -13,12 +14,12 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 
-
+# claude
 DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
-
+# OpenAI:
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,sora.com
@@ -59,7 +60,7 @@ IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 IP-ASN,20473,no-resolve
 
-
+# Copilot:
 DOMAIN,api.msn.com
 DOMAIN,api.statsig.com
 DOMAIN,assets.msn.com
@@ -113,7 +114,7 @@ IP-ASN,14061,no-resolve
 IP-ASN,20473,no-resolve
 DOMAIN-SUFFIX,x.ai
 
-
+# Other
 DOMAIN-SUFFIX,lmsys.org
 DOMAIN-SUFFIX,poe.com
 DOMAIN-KEYWORD,cohere
@@ -130,6 +131,7 @@ DOMAIN-SUFFIX,hcompany.ai
 DOMAIN-KEYWORD,hcompany
 DOMAIN-KEYWORD,groq
 
+# cursor
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
